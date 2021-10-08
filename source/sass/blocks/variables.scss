@@ -1,0 +1,43 @@
+/*Шрифты*/
+
+@font-face {
+  font-family: 'Montserat';
+  src: url("../fonts/Montserat-Bold.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserat';
+  src: url("../fonts/Montserat-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserat';
+  src: url("../fonts/Montserat-Medium.ttf") format("ttf");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+/*Переменные*/
+$regular-font: 'Montserat', sans-serif;
+$bg-accent: #F9E576;
+$accent-text: #F9E576;
+$bg-dark:#000000;
+$bg-light:#FAFAFA;
+$primery-text: #000000;
+$light-text: #f6f6f6;
+$desktop-width: 1920px;
+
+%wrapper {
+  max-width: 1620px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  @extend %wrapper;
+}

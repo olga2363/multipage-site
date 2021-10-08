@@ -1,0 +1,14 @@
+.social-network{
+    background-color: $bg-light;
+    margin: 0;
+    &__list{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 90px 110px;
+        margin: 0;
+    }
+
+    
+}

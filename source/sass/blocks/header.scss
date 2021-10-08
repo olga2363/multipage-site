@@ -1,0 +1,133 @@
+.header{
+  font-family: $regular-font;
+  background-color: $bg-accent;
+  color: $primery-text;
+  padding-top: 35px;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button{
+    color: $primery-text;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    padding: 16px 26px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+ 
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+
+  &__item{
+    position: relative;
+    font-size: 16px;
+    font-weight: 20px;
+  }
+
+  &__link{
+    margin-right: 70px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: $primery-text;
+    position: relative;
+  }
+
+
+
+  &__item:hover > .menu__link,
+  &__item:focus > .menu__link,
+  &__item:active > .menu__link,
+  &__item.active > .menu__link {
+
+    &::after {
+      content: "";
+        padding: 4px;
+        display: inline-block;
+        background:  url("../img/Arrow-down.png") no-repeat;
+        margin-left: 10px;
+    }
+  }
+}
+
+.popup-menu__link {
+  color: $primery-text;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 16px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-text;
+  }
+}
+
+.popup-menu__item:hover > .popup-menu__link,
+.popup-menu__item:focus > .popup-menu__link,
+.popup-menu__item:active > .popup-menu__link,
+.popup-menu__item.active > .popup-menu__link {
+  color: $accent-text;
+
+}
+
+.popup-menu {
+  padding: 40px 0 0;
+  width: 200px;
+  margin: 0;
+  list-style: none;
+  transition: 0.3s;
+  display: none;
+
+    &__item {
+      padding-top: 16px;
+      text-align: center;
+    }
+  
+
+  &.abs {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding: 35px 9px;
+    position: absolute;
+    top: -15px;
+    margin-top: 17px;
+    left: -75px;
+    opacity: 0;
+    cursor: pointer;
+    background: url("../img/Vacancies_open.png") no-repeat;
+
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+}
+
+
+.menu__item:hover > .popup-menu.abs,
+.menu__item:focus > .popup-menu.abs,
+.menu__item:active > .popup-menu.abs  {
+  opacity: 1;
+  height: auto;
+  z-index: 10;
+}
